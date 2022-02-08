@@ -1,3 +1,42 @@
 ﻿@{
     ViewData["Title"] = "Quadrants";
 }
+
+@model List<Covey.Models.Task>
+
+<div class="row">
+    <h1>Stephen Covey's Time Managament Matrix</h1>
+</div>
+
+
+<table class="table table-bordered">
+    <thead class="font-weight-bold">
+        <tr class="text-center">
+            <td></td>
+            <td>Urgent</td>
+            <td>Not Urgent</td>
+        </tr>
+    </thead>
+
+    <tbody class="text-center">
+        <tr>
+            <td class="font-weight-bold">Important</td>
+            <td class="font-weight-bold">
+                Quadrant I
+                @*@foreach (var x in Model)
+                {
+                    if (x.Completed == "false" && x.Quadrant == 1)
+                    {
+                        <p>@x.TaskName</p>
+                    }
+                }*@
+            </td>
+            <td class="font-weight-bold">Quadrant II</td>
+        </tr>
+        <tr>
+            <td class="font-weight-bold">Not Important</td>
+            <td class="font-weight-bold">Quadrant III</td>
+            <td class="font-weight-bold">Quadrant IV</td>
+        </tr>
+    </tbody>
+</table>

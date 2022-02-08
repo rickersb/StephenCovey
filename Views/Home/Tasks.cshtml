@@ -3,13 +3,14 @@
 }
 
 
-@model Covey.Models.ApplicationResponse
+@model Covey.Models.Task
 <h1>Add a Task</h1>
 
 <div>
     <form method="post">
-        <label asp-for="Task">Task:</label>
-        <input asp-for="Task" />
+        <div asp-validation-summary="All"></div>
+        <label asp-for="TaskName">Task:</label>
+        <input asp-for="TaskName" />
         <br />
         <label asp-for="DueDate">Due Date:</label>
         <input asp-for="DueDate" type="date" />

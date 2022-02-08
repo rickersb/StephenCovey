@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ben/Projects/Covey/Covey/Covey.csproj": {}
+    "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\Covey.csproj": {}
   },
   "projects": {
-    "/Users/ben/Projects/Covey/Covey/Covey.csproj": {
+    "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\Covey.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ben/Projects/Covey/Covey/Covey.csproj",
+        "projectUniqueName": "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\Covey.csproj",
         "projectName": "Covey",
-        "projectPath": "/Users/ben/Projects/Covey/Covey/Covey.csproj",
-        "packagesPath": "/Users/ben/.nuget/packages/",
-        "outputPath": "/Users/ben/Projects/Covey/Covey/obj/",
+        "projectPath": "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\Covey.csproj",
+        "packagesPath": "C:\\Users\\tstee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ben/.config/NuGet/NuGet.Config"
+          "C:\\Users\\tstee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +39,28 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.22, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
