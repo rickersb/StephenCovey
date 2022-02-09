@@ -11,10 +11,11 @@ namespace Covey.Controllers
     public class HomeController : Controller
     {
 
-        private TaskContext blahContext { get; set; }
+        private TaskContext TContext { get; set; }
+        //Constructor
         public HomeController( TaskContext someName)
         {
-            blahContext = someName;
+            TContext = someName;
         }
 
         public IActionResult Index()
@@ -23,26 +24,22 @@ namespace Covey.Controllers
         }
 
         [HttpGet]
-        public IActionResult Tasks()
+        public IActionResult AddTask()
         {
-            ViewBag.Tasks = blahContext.Tasks.ToList();
-
             return View();
         }
 
         [HttpPost]
-        public IActionResult Tasks(Task task)
+        public IActionResult AddTask(Task task)
         {
             if (ModelState.IsValid)
             {
-                blahContext.Add(task);
-                blahContext.SaveChanges();
-                return View("Confirmation", task);
+                TContext.Add(task);
+                TContext.SaveChanges();
+                return View("Confirmation");
             }
             else
             {
-                ViewBag.Tasks = blahContext.Tasks.ToList();
-
                 return View(task);
             }
         }
@@ -50,27 +47,37 @@ namespace Covey.Controllers
         [HttpGet]
         public IActionResult Quadrants()
         {
-            var tasks = blahContext.Tasks
+            var tasks = TContext.Tasks
                 .ToList();
 
             return View(tasks);
+        }
+        public IActionResult Done(int taskid)
+        {
+            var task = TContext.Tasks.Single(x => x.TaskId == taskid);
+
+            task.Completed = true;
+
+            TContext.Update(task);
+            TContext.SaveChanges();
+
+            return RedirectToAction("Quadrants");
+
         }
 
         [HttpGet]
         public IActionResult Edit(int taskid)
         {
-            ViewBag.Tasks = blahContext.Tasks.ToList();
+            var task = TContext.Tasks.Single(x => x.TaskId == taskid);
 
-            var task = blahContext.Tasks.Single(x => x.TaskId == taskid);
-
-            return View("Tasks", task);
+            return View("AddTask", task);
         }
 
         [HttpPost]
         public IActionResult Edit(Task task)
         {
-            blahContext.Update(task);
-            blahContext.SaveChanges();
+            TContext.Update(task);
+            TContext.SaveChanges();
 
             return RedirectToAction("Quadrants");
         }
@@ -78,7 +85,7 @@ namespace Covey.Controllers
         [HttpGet]
         public IActionResult Delete(int taskid)
         {
-            var task = blahContext.Tasks.Single(x => x.TaskId == taskid);
+            var task = TContext.Tasks.Single(x => x.TaskId == taskid);
 
             return View(task);
         }
@@ -86,15 +93,10 @@ namespace Covey.Controllers
         [HttpPost]
         public IActionResult Delete(Task task)
         {
-            blahContext.Tasks.Remove(task);
-            blahContext.SaveChanges();
+            TContext.Tasks.Remove(task);
+            TContext.SaveChanges();
 
             return RedirectToAction("Quadrants");
-        }
-        [HttpGet]
-        public IActionResult AddTask()
-        {
-            return View();
         }
     }
 }

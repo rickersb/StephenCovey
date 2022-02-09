@@ -29,7 +29,7 @@ namespace Covey
 
             services.AddDbContext<TaskContext>(options =>
            {
-               options.UseSqlite(Configuration["ConnectionStrings:BlahConnection"]);
+               options.UseSqlite(Configuration["ConnectionStrings:TaskConnection"]);
            });
         }
 

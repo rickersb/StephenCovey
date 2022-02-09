@@ -1,31 +1,46 @@
 ﻿@{
-    ViewData["Title"] = "Add Task";
+    ViewData["Title"] = "Tasks";
 }
-<form>
-    <h1>Enter Task Info</h1>
-    <br />
-    <label>Task</label>
-    <input type="text" />
-    <label>Due Date</label>
-    <input type="datetime" />
-    <label>Task</label>
-    <input type="text" />
-    <label>What Label?</label>
-    <select>
-        <option value="1">Important/Urgent</option>
-        <option value="2">Important/NOT Urgent</option>
-        <option value="3">NOT Important/Urgent</option>
-        <option value="4">NOT Important/NOT Urgent</option>
-    </select>
-    <label>Category</label>
-    <select>
-        <option value="0">Home</option>
-        <option value="1">School</option>
-        <option value="2">Work</option>
-        <option value="3">Church</option>
-    </select>
-    <label>Completed</label>
-    <input type="checkbox" />
-    <br /><br />
-    <button type="submit"></button>
-</form>
+
+
+@model Covey.Models.Task
+
+<h1>Add a Task</h1>
+
+<div>
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <label asp-for="TaskName">Task:</label>
+        <input asp-for="TaskName" />
+        <br />
+        <label asp-for="DueDate">Due Date:</label>
+        <input asp-for="DueDate" type="date" />
+        <br />
+
+        <label asp-for="Quadrant">Quadrant:</label>
+        <select asp-for="Quadrant">
+            <option value="">Select a Quadrant</option>
+            <option value="1">Important/Urgent</option>
+            <option value="2">Important/NOT Urgent</option>
+            <option value="3">NOT Important/Urgent</option>
+            <option value="4">NOT Important/NOT Urgent</option>
+
+        </select>
+        <br />
+        <label asp-for="Category">Category:</label>
+        <select asp-for="Category">
+            <option value="">Select a Category</option>
+            <option value="home">Home</option>
+            <option value="school">School</option>
+            <option value="work">Work</option>
+            <option value="church">Church</option>
+
+        </select>
+        <br />
+        <input asp-for="Completed" type="hidden" value="false"/>
+
+        <br />
+        <button type="submit">Add Task</button>
+    </form>
+</div>
+
