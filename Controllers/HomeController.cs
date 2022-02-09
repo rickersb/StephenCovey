@@ -91,5 +91,10 @@ namespace Covey.Controllers
 
             return RedirectToAction("Quadrants");
         }
+        [HttpGet]
+        public IActionResult AddTask()
+        {
+            return View();
+        }
     }
 }

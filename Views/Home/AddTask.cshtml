@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Add Task";
+}
+<form>
+    <h1>Enter Task Info</h1>
+    <br />
+    <label>Task</label>
+    <input type="text" />
+    <label>Due Date</label>
+    <input type="datetime" />
+    <label>Task</label>
+    <input type="text" />
+    <label>What Label?</label>
+    <select>
+        <option value="1">Important/Urgent</option>
+        <option value="2">Important/NOT Urgent</option>
+        <option value="3">NOT Important/Urgent</option>
+        <option value="4">NOT Important/NOT Urgent</option>
+    </select>
+    <label>Category</label>
+    <select>
+        <option value="0">Home</option>
+        <option value="1">School</option>
+        <option value="2">Work</option>
+        <option value="3">Church</option>
+    </select>
+    <label>Completed</label>
+    <input type="checkbox" />
+    <br /><br />
+    <button type="submit"></button>
+</form>
