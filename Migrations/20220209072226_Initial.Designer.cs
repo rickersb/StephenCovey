@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Covey.Migrations
 {
     [DbContext(typeof(TaskContext))]
-    [Migration("20220208064706_Inital")]
-    partial class Inital
+    [Migration("20220209072226_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

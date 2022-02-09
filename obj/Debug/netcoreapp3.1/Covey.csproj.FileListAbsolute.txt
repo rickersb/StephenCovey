@@ -192,3 +192,4 @@ C:\Users\ehorl\Source\Repos\StephenCovey\obj\Debug\netcoreapp3.1\Covey.csproj.Co
 C:\Users\ehorl\Source\Repos\StephenCovey\obj\Debug\netcoreapp3.1\Covey.dll
 C:\Users\ehorl\Source\Repos\StephenCovey\obj\Debug\netcoreapp3.1\Covey.pdb
 C:\Users\ehorl\Source\Repos\StephenCovey\obj\Debug\netcoreapp3.1\Covey.genruntimeconfig.cache
+C:\Users\ehorl\Source\Repos\StephenCovey\obj\Debug\netcoreapp3.1\Razor\Views\Home\Delete.cshtml.g.cs

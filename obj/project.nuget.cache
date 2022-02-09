@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q3AXsLDqWZCPxqKxfNc08P2Bd5lP7GO5L/PlUpS/C3Bq80mWZgdvbP4r7RASgfOVlKrjPnAhRmWdeHFeeOZ/Qw==",
+  "dgSpecHash": "qrSYnGMjKL8XKI8MmIe9RzXGMbcg+GMl97GUoZ9ETpqXXlSK3warR1XdKcetKtdLeD/7pLF2WPjn3jPp1DyTXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\Covey.csproj",
+  "projectFilePath": "C:\\Users\\ehorl\\source\\repos\\StephenCovey\\Covey.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ehorl\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ehorl\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

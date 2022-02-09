@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\Covey.csproj": {}
+    "C:\\Users\\ehorl\\source\\repos\\StephenCovey\\Covey.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\Covey.csproj": {
+    "C:\\Users\\ehorl\\source\\repos\\StephenCovey\\Covey.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\Covey.csproj",
+        "projectUniqueName": "C:\\Users\\ehorl\\source\\repos\\StephenCovey\\Covey.csproj",
         "projectName": "Covey",
-        "projectPath": "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\Covey.csproj",
+        "projectPath": "C:\\Users\\ehorl\\source\\repos\\StephenCovey\\Covey.csproj",
         "packagesPath": "C:\\Users\\ehorl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\obj\\",
+        "outputPath": "C:\\Users\\ehorl\\source\\repos\\StephenCovey\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ehorl\\AppData\\Roaming\\NuGet\\NuGet.Config",
