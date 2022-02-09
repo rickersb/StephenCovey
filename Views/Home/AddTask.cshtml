@@ -27,14 +27,14 @@
 
         </select>
         <br />
-        <label asp-for="Category">Category:</label>
-        <select asp-for="Category">
+        <label asp-for="CategoryID">Category:</label>
+        <select asp-for="CategoryID">
             <option value="">Select a Category</option>
-            <option value="home">Home</option>
-            <option value="school">School</option>
-            <option value="work">Work</option>
-            <option value="church">Church</option>
+            @foreach (Category c in ViewBag.Category)
+            {
+                <option value="@c.CategoryID">@c.CategoryType</option>
 
+            }
         </select>
         <br />
         <input asp-for="Completed" type="hidden" value="false"/>

@@ -26,6 +26,7 @@ namespace Covey.Controllers
         [HttpGet]
         public IActionResult AddTask()
         {
+            ViewBag.Category = TContext.Categories.ToList();
             return View();
         }
 
@@ -40,6 +41,7 @@ namespace Covey.Controllers
             }
             else
             {
+                ViewBag.Category = TContext.Categories.ToList();
                 return View(task);
             }
         }
@@ -52,6 +54,7 @@ namespace Covey.Controllers
 
             return View(tasks);
         }
+
         public IActionResult Done(int taskid)
         {
             var task = TContext.Tasks.Single(x => x.TaskId == taskid);
@@ -69,7 +72,7 @@ namespace Covey.Controllers
         public IActionResult Edit(int taskid)
         {
             var task = TContext.Tasks.Single(x => x.TaskId == taskid);
-
+            ViewBag.Category = TContext.Categories.ToList();
             return View("AddTask", task);
         }
 
