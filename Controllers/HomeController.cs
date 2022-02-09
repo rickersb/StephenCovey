@@ -12,7 +12,7 @@ namespace Covey.Controllers
     {
 
         private TaskContext blahContext { get; set; }
-        public HomeController(ILogger<HomeController> logger, TaskContext someName)
+        public HomeController( TaskContext someName)
         {
             blahContext = someName;
         }
@@ -25,15 +25,26 @@ namespace Covey.Controllers
         [HttpGet]
         public IActionResult Tasks()
         {
+            ViewBag.Tasks = blahContext.Tasks.ToList();
+
             return View();
         }
 
         [HttpPost]
         public IActionResult Tasks(Task task)
         {
-            blahContext.Add(task);
-            blahContext.SaveChanges();
-            return View("Confirmation", task);
+            if (ModelState.IsValid)
+            {
+                blahContext.Add(task);
+                blahContext.SaveChanges();
+                return View("Confirmation", task);
+            }
+            else
+            {
+                ViewBag.Tasks = blahContext.Tasks.ToList();
+
+                return View(task);
+            }
         }
 
         [HttpGet]
@@ -42,7 +53,43 @@ namespace Covey.Controllers
             var tasks = blahContext.Tasks
                 .ToList();
 
-            return View();
+            return View(tasks);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int taskid)
+        {
+            ViewBag.Tasks = blahContext.Tasks.ToList();
+
+            var task = blahContext.Tasks.Single(x => x.TaskId == taskid);
+
+            return View("Tasks", task);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Task task)
+        {
+            blahContext.Update(task);
+            blahContext.SaveChanges();
+
+            return RedirectToAction("Quadrants");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int taskid)
+        {
+            var task = blahContext.Tasks.Single(x => x.TaskId == taskid);
+
+            return View(task);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Task task)
+        {
+            blahContext.Tasks.Remove(task);
+            blahContext.SaveChanges();
+
+            return RedirectToAction("Quadrants");
         }
     }
 }

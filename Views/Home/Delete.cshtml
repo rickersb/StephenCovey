@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Delete Task";
+}
+
+@model Covey.Models.Task
+
+<h2>Would you really like to delete the task @Model.TaskName? </h2>
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <a asp-controller="Home" asp-action="Quadrants" class="btn-primary">Cancel</a>
+
+    <input type="hidden" asp-for="TaskId" />
+</form>
+
