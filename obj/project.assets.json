@@ -1194,19 +1194,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tstee\\.nuget\\packages\\": {}
+    "C:\\Users\\ehorl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\Covey.csproj",
+      "projectUniqueName": "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\Covey.csproj",
       "projectName": "Covey",
-      "projectPath": "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\Covey.csproj",
-      "packagesPath": "C:\\Users\\tstee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tstee\\Source\\Repos\\StephenCovey2\\obj\\",
+      "projectPath": "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\Covey.csproj",
+      "packagesPath": "C:\\Users\\ehorl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ehorl\\Source\\Repos\\StephenCovey\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tstee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ehorl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
